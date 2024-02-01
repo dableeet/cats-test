@@ -1,9 +1,7 @@
 import axios from 'axios';
 import {
-  Dispatch,
   ReactNode,
   RefObject,
-  SetStateAction,
   createContext,
   useCallback,
   useEffect,
@@ -152,21 +150,10 @@ export default function CatsContextProvider({
           (favCat) => favCat.id !== cat.id
         );
         updateAllCatsList(false, cat.id);
-        // allCats.current =
-        //   allCats.current &&
-        //   allCats.current.map((el) =>
-        //     el.id === cat.id ? { ...el, isFavorite: false } : el
-        //   );
       } else {
         favoriteCats.current = favoriteCats.current
           ? [...favoriteCats.current, { ...cat, isFavorite: true }]
           : [{ ...cat, isFavorite: true }];
-
-        // allCats.current =
-        //   allCats.current &&
-        //   allCats.current.map((el) =>
-        //     el.id === cat.id ? { ...el, isFavorite: true } : el
-        //   );
         updateAllCatsList(true, cat.id);
       }
 
