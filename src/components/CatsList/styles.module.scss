@@ -1,0 +1,17 @@
+.list {
+  all: initial;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 46px;
+}
+
+.hidden-item {
+  overflow: hidden;
+}
+
+.notify {
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+  font-size: 24px;
+}
